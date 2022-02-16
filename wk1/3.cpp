@@ -49,8 +49,7 @@ private:
     }
 
 public:
-    NormDist(UniDist<T> ud1, UniDist<T> ud2) : ud1(ud1), ud2(ud2) {
-    };
+    NormDist(UniDist<T> ud1, UniDist<T> ud2) : ud1(ud1), ud2(ud2) {};
 
     T getNum(){
         return getNorm();
@@ -58,7 +57,7 @@ public:
 };
 
 
-int main() {
+int new_main() {
     UniDist<double> ud1 (1);
     UniDist<double> ud2 (2);
 
