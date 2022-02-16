@@ -6,6 +6,7 @@
 #include <functional>
 
 #include "3.cpp"
+#include "vector_help.h"
 
 
 template <typename T>
@@ -70,6 +71,8 @@ int main(){
     int bin_num = 10;
     auto vec1 = bin_division( a, bin_num );
     auto vec2 = bin_division( b, bin_num );
+
+    // std::cout << vec1;
 
     for ( int i = 0; i < bin_num; i++ )
         std::cout << vec1.at(i) << '\t';
