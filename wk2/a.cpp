@@ -111,15 +111,15 @@ std::vector<T> oneIteration ( Transpositions &transpositions, Monkey &monkey ){
 
 template <typename T>
 void printData( std::string name, std::vector<T> &vec ){
-    std::ofstream fout;
-    fout.open(name);
+    std::ofstream outStream;
+    outStream.open(name);
     for ( auto& i: vec ) {
         for ( auto &j: i ) {
-            fout << j << '\t';
+            outStream << j << '\t';
         }
-        fout << '\n';
+        outStream << '\n';
     }
-    fout.close();
+    outStream.close();
 }
 
 
