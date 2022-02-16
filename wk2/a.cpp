@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 #include <random>
 #include <ctime>
 
@@ -107,6 +109,20 @@ std::vector<T> oneIteration ( Transpositions &transpositions, Monkey &monkey ){
 }
 
 
+template <typename T>
+void printData( std::string name, std::vector<T> &vec ){
+    std::ofstream fout;
+    fout.open(name);
+    for ( auto& i: vec ) {
+        for ( auto &j: i ) {
+            fout << j << '\t';
+        }
+        fout << '\n';
+    }
+    fout.close();
+}
+
+
 int main() {
     int iterationQ = 1000;
 
@@ -121,8 +137,9 @@ int main() {
     for ( int i = 0; i < iterationQ; i++ ){
         auto iterationRes = oneIteration<int> ( transpositions, monkey );
         data.emplace_back( iterationRes );
-        printWord( iterationRes );
     }
+
+    printData("3x3.txt", data );
 
     return 0;
 }
