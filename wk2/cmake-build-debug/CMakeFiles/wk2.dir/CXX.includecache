@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/My Drive/MIPT LPR 4 semester/CppPython/Kleimenov_vychmetody2sem/wk2/a.cpp
+iostream
+-
+fstream
+-
+random
+-
+ctime
+-
+deque
+-
+vector
+-
+functional
+-
+
